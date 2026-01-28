@@ -1,0 +1,930 @@
+{
+  "timestamp": "2026-01-28T13:55:42.010776",
+  "iterations": 1,
+  "providers": {
+    "minimax": {
+      "total_latency_mean_ms": 4550.156795697694,
+      "total_cost_usd": 0.015179999999999999,
+      "avg_realtime_factor": 1.3887610889842787,
+      "languages_tested": [
+        "multilingual",
+        "en",
+        "zh"
+      ],
+      "results": [
+        {
+          "provider": "MiniMax",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 3647.1111665014178,
+            "median_ms": 3647.1111665014178,
+            "min_ms": 3067.6632079994306,
+            "max_ms": 4226.559125003405,
+            "p95_ms": 4226.559125003405,
+            "std_dev_ms": 819.4631616029126,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 2.1435,
+          "sample_rate": 32000,
+          "characters": 32,
+          "realtime_factor": 0.6987403292546832,
+          "chars_per_second": 10.431392832353565,
+          "cost_usd": 0.0019199999999999998,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax/basic.wav"
+        },
+        {
+          "provider": "MiniMax",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 5202.158666492323,
+            "median_ms": 5202.158666492323,
+            "min_ms": 5078.4744169941405,
+            "max_ms": 5325.842915990506,
+            "p95_ms": 5325.842915990506,
+            "std_dev_ms": 174.91594309226795,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 8.02975,
+          "sample_rate": 32000,
+          "characters": 71,
+          "realtime_factor": 1.581134281809116,
+          "chars_per_second": 13.980576482262492,
+          "cost_usd": 0.00426,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax/complex.wav"
+        },
+        {
+          "provider": "MiniMax",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 5494.551186995523,
+            "median_ms": 5494.551186995523,
+            "min_ms": 5301.817540996126,
+            "max_ms": 5687.284832994919,
+            "p95_ms": 5687.284832994919,
+            "std_dev_ms": 272.56653609796183,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 12.3835,
+          "sample_rate": 32000,
+          "characters": 70,
+          "realtime_factor": 2.17740105580027,
+          "chars_per_second": 12.308157944524481,
+          "cost_usd": 0.0042,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax/numbers.wav"
+        },
+        {
+          "provider": "MiniMax",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 4279.10824999708,
+            "median_ms": 4279.10824999708,
+            "min_ms": 4174.923500002478,
+            "max_ms": 4383.292999991681,
+            "p95_ms": 4383.292999991681,
+            "std_dev_ms": 147.3394864348158,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 5.522,
+          "sample_rate": 32000,
+          "characters": 32,
+          "realtime_factor": 1.2597834550440685,
+          "chars_per_second": 7.30044740337019,
+          "cost_usd": 0.0019199999999999998,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax/chinese_mix.wav"
+        },
+        {
+          "provider": "MiniMax",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 4127.854708502127,
+            "median_ms": 4127.854708502127,
+            "min_ms": 4113.294374998077,
+            "max_ms": 4142.415042006178,
+            "p95_ms": 4142.415042006178,
+            "std_dev_ms": 20.591421114103593,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 5.04596875,
+          "sample_rate": 32000,
+          "characters": 48,
+          "realtime_factor": 1.226746323013256,
+          "chars_per_second": 11.669478433578545,
+          "cost_usd": 0.00288,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax/english_mix.wav"
+        }
+      ]
+    },
+    "minimax_streaming": {
+      "total_latency_mean_ms": 1600.9270168025978,
+      "total_cost_usd": 0.015179999999999999,
+      "avg_realtime_factor": 4.503992550729961,
+      "languages_tested": [
+        "multilingual",
+        "en",
+        "zh"
+      ],
+      "results": [
+        {
+          "provider": "MiniMax Streaming",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 1415.029042007518,
+            "median_ms": 1415.029042007518,
+            "min_ms": 1336.5711250080494,
+            "max_ms": 1493.4869590069866,
+            "p95_ms": 1493.4869590069866,
+            "std_dev_ms": 110.95625029619107,
+            "ttfb_mean_ms": 1415.029042007518
+          },
+          "iterations": 2,
+          "duration_seconds": 2.4148125,
+          "sample_rate": 32000,
+          "characters": 32,
+          "realtime_factor": 1.8067220328326763,
+          "chars_per_second": 23.941860931499086,
+          "cost_usd": 0.0019199999999999998,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_streaming/basic.wav"
+        },
+        {
+          "provider": "MiniMax Streaming",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 1607.9098129994236,
+            "median_ms": 1607.9098129994236,
+            "min_ms": 1363.1566669937456,
+            "max_ms": 1852.6629590051016,
+            "p95_ms": 1852.6629590051016,
+            "std_dev_ms": 346.13321851471215,
+            "ttfb_mean_ms": 1607.9098129994236
+          },
+          "iterations": 2,
+          "duration_seconds": 8.2468125,
+          "sample_rate": 32000,
+          "characters": 71,
+          "realtime_factor": 6.049790680470507,
+          "chars_per_second": 52.08498899585821,
+          "cost_usd": 0.00426,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_streaming/complex.wav"
+        },
+        {
+          "provider": "MiniMax Streaming",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 1581.8275204946985,
+            "median_ms": 1581.8275204946985,
+            "min_ms": 1553.1664159934735,
+            "max_ms": 1610.4886249959236,
+            "p95_ms": 1610.4886249959236,
+            "std_dev_ms": 40.532922698225036,
+            "ttfb_mean_ms": 1581.8275204946985
+          },
+          "iterations": 2,
+          "duration_seconds": 13.3948125,
+          "sample_rate": 32000,
+          "characters": 70,
+          "realtime_factor": 8.624196584518659,
+          "chars_per_second": 45.0692207088607,
+          "cost_usd": 0.0042,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_streaming/numbers.wav"
+        },
+        {
+          "provider": "MiniMax Streaming",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 1759.5479170049657,
+            "median_ms": 1759.5479170049657,
+            "min_ms": 1739.466375001939,
+            "max_ms": 1779.6294590079924,
+            "p95_ms": 1779.6294590079924,
+            "std_dev_ms": 28.399589054045325,
+            "ttfb_mean_ms": 1759.5479170049657
+          },
+          "iterations": 2,
+          "duration_seconds": 5.3308125,
+          "sample_rate": 32000,
+          "characters": 32,
+          "realtime_factor": 2.9954620457741363,
+          "chars_per_second": 17.981271234876925,
+          "cost_usd": 0.0019199999999999998,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_streaming/chinese_mix.wav"
+        },
+        {
+          "provider": "MiniMax Streaming",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 1640.320791506383,
+            "median_ms": 1640.320791506383,
+            "min_ms": 1446.4776250097202,
+            "max_ms": 1834.163958003046,
+            "p95_ms": 1834.163958003046,
+            "std_dev_ms": 274.1356350329266,
+            "ttfb_mean_ms": 1640.320791506383
+          },
+          "iterations": 2,
+          "duration_seconds": 5.5828125,
+          "sample_rate": 32000,
+          "characters": 48,
+          "realtime_factor": 3.0437914100538275,
+          "chars_per_second": 26.169961409698733,
+          "cost_usd": 0.00288,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_streaming/english_mix.wav"
+        }
+      ]
+    },
+    "minimax_pcm": {
+      "total_latency_mean_ms": 1812.7318252052646,
+      "total_cost_usd": 0.015179999999999999,
+      "avg_realtime_factor": 4.026833148340788,
+      "languages_tested": [
+        "zh",
+        "en",
+        "multilingual"
+      ],
+      "results": [
+        {
+          "provider": "MiniMax PCM",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 1901.3968749932246,
+            "median_ms": 1901.3968749932246,
+            "min_ms": 1901.3968749932246,
+            "max_ms": 1901.3968749932246,
+            "p95_ms": 1901.3968749932246,
+            "std_dev_ms": 0,
+            "ttfb_mean_ms": 1901.3968749932246
+          },
+          "iterations": 1,
+          "duration_seconds": 2.5774166666666667,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 1.3555384993865895,
+          "chars_per_second": 16.829732088475232,
+          "cost_usd": 0.0019199999999999998,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_pcm/basic.wav"
+        },
+        {
+          "provider": "MiniMax PCM",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 1791.8537920049857,
+            "median_ms": 1791.8537920049857,
+            "min_ms": 1791.8537920049857,
+            "max_ms": 1791.8537920049857,
+            "p95_ms": 1791.8537920049857,
+            "std_dev_ms": 0,
+            "ttfb_mean_ms": 1791.8537920049857
+          },
+          "iterations": 1,
+          "duration_seconds": 8.370791666666667,
+          "sample_rate": 24000,
+          "characters": 71,
+          "realtime_factor": 4.67158185785918,
+          "chars_per_second": 39.62376858915197,
+          "cost_usd": 0.00426,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_pcm/complex.wav"
+        },
+        {
+          "provider": "MiniMax PCM",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 1804.3600420060102,
+            "median_ms": 1804.3600420060102,
+            "min_ms": 1804.3600420060102,
+            "max_ms": 1804.3600420060102,
+            "p95_ms": 1804.3600420060102,
+            "std_dev_ms": 0,
+            "ttfb_mean_ms": 1804.3600420060102
+          },
+          "iterations": 1,
+          "duration_seconds": 14.419583333333334,
+          "sample_rate": 24000,
+          "characters": 70,
+          "realtime_factor": 7.991522200470732,
+          "chars_per_second": 38.79491807088401,
+          "cost_usd": 0.0042,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_pcm/numbers.wav"
+        },
+        {
+          "provider": "MiniMax PCM",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 1765.3660830110312,
+            "median_ms": 1765.3660830110312,
+            "min_ms": 1765.3660830110312,
+            "max_ms": 1765.3660830110312,
+            "p95_ms": 1765.3660830110312,
+            "std_dev_ms": 0,
+            "ttfb_mean_ms": 1765.3660830110312
+          },
+          "iterations": 1,
+          "duration_seconds": 5.51475,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 3.1238563225333817,
+          "chars_per_second": 18.126551941804834,
+          "cost_usd": 0.0019199999999999998,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_pcm/chinese_mix.wav"
+        },
+        {
+          "provider": "MiniMax PCM",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 1800.6823340110714,
+            "median_ms": 1800.6823340110714,
+            "min_ms": 1800.6823340110714,
+            "max_ms": 1800.6823340110714,
+            "p95_ms": 1800.6823340110714,
+            "std_dev_ms": 0,
+            "ttfb_mean_ms": 1800.6823340110714
+          },
+          "iterations": 1,
+          "duration_seconds": 5.387041666666667,
+          "sample_rate": 24000,
+          "characters": 48,
+          "realtime_factor": 2.9916668614540565,
+          "chars_per_second": 26.656561845130465,
+          "cost_usd": 0.00288,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/minimax_pcm/english_mix.wav"
+        }
+      ]
+    },
+    "azure": {
+      "total_latency_mean_ms": 261.59746649791487,
+      "total_cost_usd": 0.0040479999999999995,
+      "avg_realtime_factor": 25.19905973996033,
+      "languages_tested": [
+        "zh",
+        "en",
+        "multilingual"
+      ],
+      "results": [
+        {
+          "provider": "Azure TTS",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 250.34506199881434,
+            "median_ms": 250.34506199881434,
+            "min_ms": 219.21804100566078,
+            "max_ms": 281.4720829919679,
+            "p95_ms": 281.4720829919679,
+            "std_dev_ms": 44.020255244789816,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 2.7129583333333334,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 12.375616171404788,
+          "chars_per_second": 145.9733872869235,
+          "cost_usd": 0.000512,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_tts/basic.wav"
+        },
+        {
+          "provider": "Azure TTS",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 288.84481249406235,
+            "median_ms": 288.84481249406235,
+            "min_ms": 279.3768339906819,
+            "max_ms": 298.3127909974428,
+            "p95_ms": 298.3127909974428,
+            "std_dev_ms": 13.389743607737532,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 7.080958333333333,
+          "sample_rate": 24000,
+          "characters": 71,
+          "realtime_factor": 23.736690303011624,
+          "chars_per_second": 238.00521513879247,
+          "cost_usd": 0.001136,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_tts/complex.wav"
+        },
+        {
+          "provider": "Azure TTS",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 280.8840415018494,
+            "median_ms": 280.8840415018494,
+            "min_ms": 257.35275000624824,
+            "max_ms": 304.4153329974506,
+            "p95_ms": 304.4153329974506,
+            "std_dev_ms": 33.27827157323386,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 11.520958333333333,
+          "sample_rate": 24000,
+          "characters": 70,
+          "realtime_factor": 44.7671856354891,
+          "chars_per_second": 272.0002020506891,
+          "cost_usd": 0.00112,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_tts/numbers.wav"
+        },
+        {
+          "provider": "Azure TTS",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 243.20616699696984,
+            "median_ms": 243.20616699696984,
+            "min_ms": 228.6713339999551,
+            "max_ms": 257.7409999939846,
+            "p95_ms": 257.7409999939846,
+            "std_dev_ms": 20.555357951206233,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 6.648958333333334,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 29.076483777081737,
+          "chars_per_second": 139.9388346595568,
+          "cost_usd": 0.000512,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_tts/chinese_mix.wav"
+        },
+        {
+          "provider": "Azure TTS",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 244.70724949787837,
+            "median_ms": 244.70724949787837,
+            "min_ms": 212.5350830028765,
+            "max_ms": 276.87941599288024,
+            "p95_ms": 276.87941599288024,
+            "std_dev_ms": 45.49831418815693,
+            "ttfb_mean_ms": null
+          },
+          "iterations": 2,
+          "duration_seconds": 4.440958333333334,
+          "sample_rate": 24000,
+          "characters": 48,
+          "realtime_factor": 16.039322812814405,
+          "chars_per_second": 173.3606661509077,
+          "cost_usd": 0.000768,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_tts/english_mix.wav"
+        }
+      ]
+    },
+    "azure_streaming": {
+      "total_latency_mean_ms": 211.47444989910582,
+      "total_cost_usd": 0.0040479999999999995,
+      "avg_realtime_factor": 32.71202754323498,
+      "languages_tested": [
+        "zh",
+        "en",
+        "multilingual"
+      ],
+      "results": [
+        {
+          "provider": "Azure Streaming",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 206.7028124947683,
+            "median_ms": 206.7028124947683,
+            "min_ms": 165.22066699690185,
+            "max_ms": 248.18495799263474,
+            "p95_ms": 248.18495799263474,
+            "std_dev_ms": 58.66461275941675,
+            "ttfb_mean_ms": 206.7028124947683
+          },
+          "iterations": 2,
+          "duration_seconds": 2.7129583333333334,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 16.42021172438558,
+          "chars_per_second": 193.6803705107912,
+          "cost_usd": 0.000512,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_streaming/basic.wav"
+        },
+        {
+          "provider": "Azure Streaming",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 239.87874949671095,
+            "median_ms": 239.87874949671095,
+            "min_ms": 206.84045799134765,
+            "max_ms": 272.91704100207426,
+            "p95_ms": 272.91704100207426,
+            "std_dev_ms": 46.72319992452061,
+            "ttfb_mean_ms": 239.87874949671095
+          },
+          "iterations": 2,
+          "duration_seconds": 7.080958333333333,
+          "sample_rate": 24000,
+          "characters": 71,
+          "realtime_factor": 25.945460596135938,
+          "chars_per_second": 260.15231492803844,
+          "cost_usd": 0.001136,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_streaming/complex.wav"
+        },
+        {
+          "provider": "Azure Streaming",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 226.34229149844032,
+            "median_ms": 226.34229149844032,
+            "min_ms": 181.74983299104497,
+            "max_ms": 270.93475000583567,
+            "p95_ms": 270.93475000583567,
+            "std_dev_ms": 63.063259600718006,
+            "ttfb_mean_ms": 226.34229149844032
+          },
+          "iterations": 2,
+          "duration_seconds": 11.520958333333333,
+          "sample_rate": 24000,
+          "characters": 70,
+          "realtime_factor": 63.389099971833176,
+          "chars_per_second": 385.1447830681032,
+          "cost_usd": 0.00112,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_streaming/numbers.wav"
+        },
+        {
+          "provider": "Azure Streaming",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 187.1871875046054,
+            "median_ms": 187.1871875046054,
+            "min_ms": 185.3435829980299,
+            "max_ms": 189.0307920111809,
+            "p95_ms": 189.0307920111809,
+            "std_dev_ms": 2.6072504968512336,
+            "ttfb_mean_ms": 187.1871875046054
+          },
+          "iterations": 2,
+          "duration_seconds": 6.648958333333334,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 35.17394315810758,
+          "chars_per_second": 169.28458934937566,
+          "cost_usd": 0.000512,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_streaming/chinese_mix.wav"
+        },
+        {
+          "provider": "Azure Streaming",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 197.26120850100415,
+            "median_ms": 197.26120850100415,
+            "min_ms": 196.22974999947473,
+            "max_ms": 198.29266700253356,
+            "p95_ms": 198.29266700253356,
+            "std_dev_ms": 1.4587026018879274,
+            "ttfb_mean_ms": 197.26120850100415
+          },
+          "iterations": 2,
+          "duration_seconds": 4.440958333333334,
+          "sample_rate": 24000,
+          "characters": 48,
+          "realtime_factor": 22.63142226571262,
+          "chars_per_second": 244.6112274011891,
+          "cost_usd": 0.000768,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/azure_streaming/english_mix.wav"
+        }
+      ]
+    },
+    "elevenlabs": {
+      "total_latency_mean_ms": 1123.8544082007138,
+      "total_cost_usd": 0.041745000000000004,
+      "avg_realtime_factor": 4.732866144394428,
+      "languages_tested": [
+        "zh",
+        "en",
+        "multilingual"
+      ],
+      "results": [
+        {
+          "provider": "ElevenLabs Standard",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 832.7016665061819,
+            "median_ms": 832.7016665061819,
+            "min_ms": 830.080291008926,
+            "max_ms": 835.3230420034379,
+            "p95_ms": 835.3230420034379,
+            "std_dev_ms": 3.7071847802918665,
+            "ttfb_mean_ms": 823.213958501583
+          },
+          "iterations": 2,
+          "duration_seconds": 1.7647083333333333,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 2.112605835822341,
+          "chars_per_second": 38.30853261661648,
+          "cost_usd": 0.00528,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_standard/basic.wav"
+        },
+        {
+          "provider": "ElevenLabs Standard",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 1216.3389999986975,
+            "median_ms": 1216.3389999986975,
+            "min_ms": 1204.616792005254,
+            "max_ms": 1228.0612079921411,
+            "p95_ms": 1228.0612079921411,
+            "std_dev_ms": 16.57770552528623,
+            "ttfb_mean_ms": 1177.241833502194
+          },
+          "iterations": 2,
+          "duration_seconds": 6.548041666666666,
+          "sample_rate": 24000,
+          "characters": 71,
+          "realtime_factor": 5.435788136214281,
+          "chars_per_second": 58.93990559587877,
+          "cost_usd": 0.011715000000000001,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_standard/complex.wav"
+        },
+        {
+          "provider": "ElevenLabs Standard",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 1317.7917915018043,
+            "median_ms": 1317.7917915018043,
+            "min_ms": 1283.1264580017887,
+            "max_ms": 1352.4571250018198,
+            "p95_ms": 1352.4571250018198,
+            "std_dev_ms": 49.02418477990838,
+            "ttfb_mean_ms": 1284.391521003272
+          },
+          "iterations": 2,
+          "duration_seconds": 8.777166666666666,
+          "sample_rate": 24000,
+          "characters": 70,
+          "realtime_factor": 6.489792914252166,
+          "chars_per_second": 51.757648139792835,
+          "cost_usd": 0.01155,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_standard/numbers.wav"
+        },
+        {
+          "provider": "ElevenLabs Standard",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 1190.783416503109,
+            "median_ms": 1190.783416503109,
+            "min_ms": 1153.8702499965439,
+            "max_ms": 1227.6965830096742,
+            "p95_ms": 1227.6965830096742,
+            "std_dev_ms": 52.20310070372075,
+            "ttfb_mean_ms": 1158.992020500591
+          },
+          "iterations": 2,
+          "duration_seconds": 6.315833333333333,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 5.144457857698187,
+          "chars_per_second": 26.06507213822541,
+          "cost_usd": 0.00528,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_standard/chinese_mix.wav"
+        },
+        {
+          "provider": "ElevenLabs Standard",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 1061.6561664937763,
+            "median_ms": 1061.6561664937763,
+            "min_ms": 1014.5592079934431,
+            "max_ms": 1108.7531249941094,
+            "p95_ms": 1108.7531249941094,
+            "std_dev_ms": 66.60515745769393,
+            "ttfb_mean_ms": 1041.2084789932123
+          },
+          "iterations": 2,
+          "duration_seconds": 4.969083333333334,
+          "sample_rate": 24000,
+          "characters": 48,
+          "realtime_factor": 4.481685977985165,
+          "chars_per_second": 43.29187347296542,
+          "cost_usd": 0.00792,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_standard/english_mix.wav"
+        }
+      ]
+    },
+    "elevenlabs_turbo": {
+      "total_latency_mean_ms": 239.35239160055062,
+      "total_cost_usd": 0.041745000000000004,
+      "avg_realtime_factor": 18.40207882593776,
+      "languages_tested": [
+        "zh",
+        "en",
+        "multilingual"
+      ],
+      "results": [
+        {
+          "provider": "ElevenLabs Turbo",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 160.9966664982494,
+            "median_ms": 160.9966664982494,
+            "min_ms": 159.19829199265223,
+            "max_ms": 162.79504100384656,
+            "p95_ms": 162.79504100384656,
+            "std_dev_ms": 2.5432856160415227,
+            "ttfb_mean_ms": 160.9966664982494
+          },
+          "iterations": 2,
+          "duration_seconds": 1.8111666666666666,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 11.376797099998162,
+          "chars_per_second": 201.0071816692415,
+          "cost_usd": 0.00528,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_turbo/basic.wav"
+        },
+        {
+          "provider": "ElevenLabs Turbo",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 266.5431040004478,
+            "median_ms": 266.5431040004478,
+            "min_ms": 251.7393330053892,
+            "max_ms": 281.34687499550637,
+            "p95_ms": 281.34687499550637,
+            "std_dev_ms": 20.9356937154773,
+            "ttfb_mean_ms": 266.5431040004478
+          },
+          "iterations": 2,
+          "duration_seconds": 6.083625,
+          "sample_rate": 24000,
+          "characters": 71,
+          "realtime_factor": 21.62321866947044,
+          "chars_per_second": 252.35752130225012,
+          "cost_usd": 0.011715000000000001,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_turbo/complex.wav"
+        },
+        {
+          "provider": "ElevenLabs Turbo",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 304.23616650659824,
+            "median_ms": 304.23616650659824,
+            "min_ms": 291.7899580061203,
+            "max_ms": 316.6823750070762,
+            "p95_ms": 316.6823750070762,
+            "std_dev_ms": 17.60159686149922,
+            "ttfb_mean_ms": 304.23616650659824
+          },
+          "iterations": 2,
+          "duration_seconds": 6.687333333333333,
+          "sample_rate": 24000,
+          "characters": 70,
+          "realtime_factor": 21.11684722960634,
+          "chars_per_second": 221.04166674396032,
+          "cost_usd": 0.01155,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_turbo/numbers.wav"
+        },
+        {
+          "provider": "ElevenLabs Turbo",
+          "sample_id": "chinese_mix",
+          "text": "\u6b22\u8fce\u4f7f\u7528Kira\u667a\u80fd\u52a9\u624b\uff0c\u6211\u662f\u60a8\u7684AI\u5ba2\u670d\uff0c\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\uff1f",
+          "language": "zh",
+          "category": "chinese_mix",
+          "latency_stats": {
+            "mean_ms": 239.90945849800482,
+            "median_ms": 239.90945849800482,
+            "min_ms": 228.33099999115802,
+            "max_ms": 251.48791700485162,
+            "p95_ms": 251.48791700485162,
+            "std_dev_ms": 16.374413051756882,
+            "ttfb_mean_ms": 239.90945849800482
+          },
+          "iterations": 2,
+          "duration_seconds": 4.783333333333333,
+          "sample_rate": 24000,
+          "characters": 32,
+          "realtime_factor": 19.020131823037268,
+          "chars_per_second": 127.2426937290298,
+          "cost_usd": 0.00528,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_turbo/chinese_mix.wav"
+        },
+        {
+          "provider": "ElevenLabs Turbo",
+          "sample_id": "english_mix",
+          "text": "Welcome to Kira\u667a\u80fd\u52a9\u624b, your AI\u5ba2\u670d for 24/7 support.",
+          "language": "multilingual",
+          "category": "english_mix",
+          "latency_stats": {
+            "mean_ms": 225.07656249945285,
+            "median_ms": 225.07656249945285,
+            "min_ms": 213.9344169991091,
+            "max_ms": 236.2187079997966,
+            "p95_ms": 236.2187079997966,
+            "std_dev_ms": 15.757373280520499,
+            "ttfb_mean_ms": 225.07656249945285
+          },
+          "iterations": 2,
+          "duration_seconds": 4.45825,
+          "sample_rate": 24000,
+          "characters": 48,
+          "realtime_factor": 18.873399307576598,
+          "chars_per_second": 203.20151780713883,
+          "cost_usd": 0.00792,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/elevenlabs_turbo/english_mix.wav"
+        }
+      ]
+    }
+  }
+}

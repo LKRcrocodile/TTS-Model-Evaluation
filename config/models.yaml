@@ -1,0 +1,110 @@
+# TTS Model Configurations
+
+providers:
+  azure:
+    name: "Azure TTS"
+    type: commercial
+    pricing_per_1m_chars: 16.00
+    supported_languages:
+      - en
+      - zh
+      - es
+      - fr
+      - de
+      - ja
+      - ko
+    default_voice_en: "en-US-JennyNeural"
+    default_voice_cn: "zh-CN-XiaoxiaoNeural"
+    max_chars_per_request: 10000
+    supports_streaming: true
+    notes: "Current baseline. 140+ languages supported."
+
+  elevenlabs:
+    name: "ElevenLabs"
+    type: commercial
+    pricing_per_1m_chars: 165.00  # Scale tier estimate
+    supported_languages:
+      - en
+      - zh
+      - es
+      - fr
+      - de
+      - ja
+      - ko
+      - pt
+      - it
+    default_voice_en: "Rachel"
+    default_voice_cn: "Rachel"  # Multilingual model
+    max_chars_per_request: 5000
+    supports_streaming: true
+    model: "eleven_multilingual_v2"
+    notes: "Highest quality. Premium pricing."
+
+  minimax:
+    name: "MiniMax"
+    type: commercial
+    pricing_per_1m_chars: 50.00  # speech-02-hd
+    pricing_turbo_per_1m_chars: 30.00  # speech-02-turbo
+    supported_languages:
+      - en
+      - zh
+      - ja
+      - ko
+      - es
+      - fr
+      - de
+      - pt
+      - it
+      - ru
+      - ar
+    default_voice_en: "English_calm_female"
+    default_voice_cn: "Chinese_calm_female"
+    max_chars_per_request: 200000
+    supports_streaming: true
+    model: "speech-02-hd"
+    notes: "Excellent price/performance. Chinese-native."
+
+  qwen3:
+    name: "Qwen3-TTS"
+    type: open_source
+    deployment: dashscope_api  # Using DashScope API (no local GPU)
+    pricing_per_1m_chars: 10.00  # DashScope estimate
+    supported_languages:
+      - en
+      - zh
+      - ja
+      - ko
+      - de
+      - fr
+      - ru
+      - pt
+      - es
+      - it
+    default_voice_en: "default"
+    default_voice_cn: "default"
+    max_chars_per_request: 5000
+    supports_streaming: true
+    notes: "3-sec voice cloning. 97ms streaming latency."
+
+  luxtts:
+    name: "LuxTTS"
+    type: open_source
+    deployment: local_cpu
+    pricing_per_1m_chars: 0.00  # Local only - compute cost
+    supported_languages:
+      - en
+    default_voice_en: "default"
+    default_voice_cn: ""  # Limited Chinese support
+    max_chars_per_request: 2000
+    supports_streaming: false
+    sample_rate: 48000
+    notes: "150x realtime on GPU, runs on CPU. <1GB VRAM."
+
+# Evaluation settings
+evaluation:
+  iterations: 10  # Number of runs per test for statistical reliability
+  warmup_runs: 1  # Discard first N runs for local models
+  output_format: wav
+  target_sample_rate: 48000
+  normalize_loudness: true
+  target_lufs: -16.0

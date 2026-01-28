@@ -1,0 +1,34 @@
+# Core
+python-dotenv>=1.0
+pydantic>=2.0
+pyyaml>=6.0
+
+# Audio Processing
+soundfile>=0.12
+librosa>=0.10
+pyloudnorm>=0.1
+pydub>=0.25
+numpy>=1.24
+
+# Commercial APIs
+azure-cognitiveservices-speech>=1.35
+elevenlabs>=1.0
+requests>=2.31
+httpx>=0.25
+
+# Open-source models (Qwen3 via DashScope)
+dashscope>=1.14
+
+# LuxTTS dependencies
+torch>=2.1
+torchaudio>=2.1
+
+# Visualization & Reporting
+matplotlib>=3.8
+plotly>=5.18
+pandas>=2.1
+jinja2>=3.1
+
+# Development
+jupyter>=1.0
+ipywidgets>=8.0

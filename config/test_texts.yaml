@@ -1,0 +1,33 @@
+# Test texts for TTS evaluation - 5 samples (4 English, 1 Chinese)
+# Each sample will be tested with streaming and non-streaming modes
+
+samples:
+  # 1. Basic - simple English
+  - id: basic
+    text: "Hello, how can I help you today?"
+    language: en
+    category: basic
+
+  # 2. Complex - technical English with abbreviations
+  - id: complex
+    text: "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report."
+    language: en
+    category: complex
+
+  # 3. Numbers only - English with numbers
+  - id: numbers
+    text: "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026."
+    language: en
+    category: numbers
+
+  # 4. Chinese mixed - Chinese with English terms
+  - id: chinese_mix
+    text: "欢迎使用Kira智能助手，我是您的AI客服，请问有什么可以帮您？"
+    language: zh
+    category: chinese_mix
+
+  # 5. English mixed - English with Chinese words (use multilingual voice)
+  - id: english_mix
+    text: "Welcome to Kira智能助手, your AI客服 for 24/7 support."
+    language: multilingual
+    category: english_mix
