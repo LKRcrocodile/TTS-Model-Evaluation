@@ -12,7 +12,7 @@ Evaluate TTS models to find better alternatives than Microsoft/AI Foundry, compa
 |-------|---------|---------------|-------|
 | Azure TTS | $16/1M chars | Yes/Yes | Current baseline |
 | ElevenLabs | ~$165/1M chars | Yes/Yes | Highest quality, premium cost |
-| MiniMax | $30-50/1M chars | Yes/Yes | Excellent price/performance, Chinese-native |
+| MiniMax | $60/1M (intl), ~$28 (China) | Yes/Yes | speech-2.6-turbo, Chinese-native |
 
 ### Open-Source (2 models)
 | Model | Deployment | EN/CN Support | Notes |
@@ -135,12 +135,10 @@ soundfile, pyloudnorm, plotly, jinja2
 
 Dashboard will show costs at 100K, 500K, and 1M+ chars/month:
 
-| Model | 100K/mo | 500K/mo | 1M/mo |
-|-------|---------|---------|-------|
-| Azure TTS | ~$1.60 | ~$8 | ~$16 |
-| ElevenLabs | ~$16.50 | ~$82.50 | ~$165 |
-| MiniMax | ~$3-5 | ~$15-25 | ~$30-50 |
-| Qwen3 (DashScope) | ~$1* | ~$5* | ~$10* |
-| LuxTTS (CPU) | ~$0** | ~$0** | ~$0** |
-
-*DashScope pricing estimate; **compute cost only (local CPU)
+| Model | 100K/mo | 500K/mo | 1M/mo | Notes |
+|-------|---------|---------|-------|-------|
+| Azure TTS | ~$1.60 | ~$8 | ~$16 | |
+| ElevenLabs | ~$16.50 | ~$82.50 | ~$165 | |
+| MiniMax | ~$6 | ~$30 | ~$60 | intl pricing; ~$28/1M in China |
+| Qwen3 (DashScope) | ~$1 | ~$5 | ~$10 | |
+| LuxTTS (CPU) | $0 | $0 | $0 | compute cost only |

@@ -91,10 +91,10 @@ TTS speech model/
 
 ## Cost Comparison
 
-| Provider | 100K/mo | 500K/mo | 1M/mo |
-|----------|---------|---------|-------|
-| Azure TTS | $1.60 | $8.00 | $16 |
-| ElevenLabs | $16.50 | $82.50 | $165 |
-| MiniMax | $5.00 | $25.00 | $50 |
-| Qwen3-TTS | $1.00 | $5.00 | $10 |
-| LuxTTS | $0 | $0 | $0 |
+| Provider | 100K/mo | 500K/mo | 1M/mo | Notes |
+|----------|---------|---------|-------|-------|
+| Azure TTS | $1.60 | $8.00 | $16 | en-US-AvaMultilingualNeural |
+| ElevenLabs | $16.50 | $82.50 | $165 | eleven_multilingual_v2 |
+| MiniMax | $6.00 | $30.00 | $60 | speech-2.6-turbo (intl), ~$28 in China |
+| Qwen3-TTS | $1.00 | $5.00 | $10 | qwen3-tts-flash via DashScope |
+| LuxTTS | $0 | $0 | $0 | Local CPU only |
