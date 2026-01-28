@@ -47,3 +47,6 @@ env/
 *.bin
 *.onnx
 models/
+
+# Vendor dependencies (install separately)
+vendor/
