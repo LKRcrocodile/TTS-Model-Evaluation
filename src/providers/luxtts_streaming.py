@@ -31,8 +31,8 @@ class LuxTTSStreamingProvider(TTSProvider):
         )
         super().__init__(config)
         self._model = None
-        self._device = "cpu"
         self._encoded_prompt = None
+        self._device = "cpu"  # LuxTTS works best on CPU (MPS not fully supported)
 
     def initialize(self) -> None:
         """Initialize LuxTTS model."""
@@ -42,11 +42,11 @@ class LuxTTSStreamingProvider(TTSProvider):
 
         from zipvoice.luxvoice import LuxTTS
 
-        print("Loading LuxTTS model for streaming...")
+        print(f"Loading LuxTTS model for streaming on {self._device.upper()}...")
         self._model = LuxTTS(
             model_path='YatharthS/LuxTTS',
             device=self._device,
-            threads=4,
+            threads=4 if self._device == "cpu" else 1,
         )
 
         prompt_path = self.DEFAULT_PROMPT_PATH
@@ -130,11 +130,15 @@ class LuxTTSStreamingProvider(TTSProvider):
         chunk_mode = kwargs.get("chunk_mode", "sentence")
         chunks = self._split_into_chunks(text, chunk_mode=chunk_mode)
 
+        # Default to num_steps=2 for streaming (faster, good quality)
+        # Use num_steps=1 for fastest TTFB (~277ms), num_steps=4 for best quality
+        num_steps = kwargs.get("num_steps", 2)
+
         for chunk in chunks:
             audio_tensor = self._model.generate_speech(
                 chunk,
                 self._encoded_prompt,
-                num_steps=kwargs.get("num_steps", 4),
+                num_steps=num_steps,
                 guidance_scale=kwargs.get("guidance_scale", 3.0),
                 t_shift=kwargs.get("t_shift", 0.5),
                 speed=kwargs.get("speed", 1.0),
