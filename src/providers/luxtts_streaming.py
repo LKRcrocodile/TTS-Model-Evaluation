@@ -56,37 +56,43 @@ class LuxTTSStreamingProvider(TTSProvider):
         self._encoded_prompt = self._model.encode_prompt(str(prompt_path), duration=5, rms=0.001)
         self._is_initialized = True
 
-    def _split_sentences(self, text: str) -> list[str]:
-        """Split text into sentences for streaming.
+    def _split_into_chunks(self, text: str, chunk_mode: str = "sentence") -> list[str]:
+        """Split text into chunks for streaming.
 
-        Merges short sentences to avoid audio generation issues with very short text.
-        Minimum chunk size is ~60 chars to ensure stable audio generation.
+        Args:
+            text: Input text to split
+            chunk_mode: "sentence" for sentence-level, "phrase" for phrase-level (lower TTFB)
+
+        Minimum chunk size is ~40 chars to ensure stable audio generation.
         """
-        # Simple split on sentence-ending punctuation followed by space
-        sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+        MIN_CHUNK_SIZE = 40  # Minimum chars per chunk for stable audio
 
-        # Merge short chunks (min 60 chars per chunk for stable audio)
-        MIN_CHUNK_SIZE = 60
+        if chunk_mode == "phrase":
+            # Split by phrases (commas, semicolons, sentence endings)
+            # This gives lower TTFB but may affect prosody
+            parts = re.split(r'(?<=[,;.!?])\s+', text.strip())
+        else:
+            # Split by sentences only
+            parts = re.split(r'(?<=[.!?])\s+', text.strip())
+
+        # Merge short chunks
         result = []
         buffer = ""
 
-        for s in sentences:
-            s = s.strip()
-            if not s:
+        for part in parts:
+            part = part.strip()
+            if not part:
                 continue
 
-            candidate = (buffer + " " + s).strip() if buffer else s
+            candidate = (buffer + " " + part).strip() if buffer else part
 
             if len(candidate) < MIN_CHUNK_SIZE:
-                # Keep accumulating
                 buffer = candidate
             else:
-                # Buffer is long enough, or adding this would make it too long
                 if buffer and len(buffer) >= MIN_CHUNK_SIZE:
                     result.append(buffer)
-                    buffer = s
+                    buffer = part
                 else:
-                    # Merge and add
                     result.append(candidate)
                     buffer = ""
 
@@ -99,6 +105,10 @@ class LuxTTSStreamingProvider(TTSProvider):
 
         return result if result else [text]
 
+    def _split_sentences(self, text: str) -> list[str]:
+        """Split text into sentences (default mode)."""
+        return self._split_into_chunks(text, chunk_mode="sentence")
+
     def generate_stream(
         self,
         text: str,
@@ -106,18 +116,23 @@ class LuxTTSStreamingProvider(TTSProvider):
         language: str = "en",
         **kwargs
     ) -> Generator[bytes, None, None]:
-        """Generate speech in streaming chunks (sentence by sentence)."""
+        """Generate speech in streaming chunks.
+
+        Args:
+            chunk_mode: "sentence" (default) or "phrase" for lower TTFB
+        """
         if not self._is_initialized:
             self.initialize()
 
         if language != "en":
             raise ValueError(f"LuxTTS only supports English, got: {language}")
 
-        sentences = self._split_sentences(text)
-        
-        for sentence in sentences:
+        chunk_mode = kwargs.get("chunk_mode", "sentence")
+        chunks = self._split_into_chunks(text, chunk_mode=chunk_mode)
+
+        for chunk in chunks:
             audio_tensor = self._model.generate_speech(
-                sentence,
+                chunk,
                 self._encoded_prompt,
                 num_steps=kwargs.get("num_steps", 4),
                 guidance_scale=kwargs.get("guidance_scale", 3.0),
