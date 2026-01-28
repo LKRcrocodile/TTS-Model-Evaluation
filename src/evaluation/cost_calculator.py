@@ -30,6 +30,7 @@ class CostCalculator:
         "Qwen3-TTS": 10.00,  # DashScope pricing
         "Qwen3-TTS Streaming": 10.00,  # Same price, realtime model
         "LuxTTS": 0.00,  # Local only
+        "LuxTTS Streaming": 0.00,  # Local only, sentence-level streaming
     }
 
     NOTES = {
@@ -42,7 +43,8 @@ class CostCalculator:
         "MiniMax PCM": "speech-2.6-turbo, streaming PCM",
         "Qwen3-TTS": "qwen3-tts-flash, non-streaming",
         "Qwen3-TTS Streaming": "qwen3-tts-flash-realtime, streaming",
-        "LuxTTS": "Local CPU - no API cost",
+        "LuxTTS": "Local CPU, voice cloning",
+        "LuxTTS Streaming": "Local CPU, sentence-level streaming",
     }
 
     @classmethod

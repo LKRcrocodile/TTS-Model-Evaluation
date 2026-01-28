@@ -14,7 +14,7 @@ class DashboardGenerator:
 
     # Commercial vs Open-source categorization
     COMMERCIAL_PROVIDERS = ["azure", "azure_streaming", "elevenlabs", "elevenlabs_turbo", "minimax", "minimax_streaming", "minimax_pcm"]
-    OPENSOURCE_PROVIDERS = ["qwen3", "qwen3_streaming", "luxtts"]
+    OPENSOURCE_PROVIDERS = ["qwen3", "qwen3_streaming", "luxtts", "luxtts_streaming"]
 
     COMMERCIAL_GROUPS = {
         "Azure": ["azure", "azure_streaming"],
@@ -24,7 +24,7 @@ class DashboardGenerator:
 
     OPENSOURCE_GROUPS = {
         "Qwen3-TTS": ["qwen3", "qwen3_streaming"],
-        "LuxTTS": ["luxtts"],
+        "LuxTTS": ["luxtts", "luxtts_streaming"],
     }
 
     # Languages supported by each provider
@@ -39,6 +39,7 @@ class DashboardGenerator:
         "Qwen3-TTS": 10,
         "Qwen3-TTS Streaming": 10,
         "LuxTTS": 1,
+        "LuxTTS Streaming": 1,
     }
 
     # Map provider keys to display names
@@ -53,6 +54,7 @@ class DashboardGenerator:
         "minimax_streaming": "MiniMax Streaming",
         "minimax_pcm": "MiniMax PCM",
         "luxtts": "LuxTTS",
+        "luxtts_streaming": "LuxTTS Streaming",
     }
 
     def __init__(self, results_path: Path, output_dir: Path):
