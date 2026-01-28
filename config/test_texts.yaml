@@ -31,3 +31,24 @@ samples:
     text: "Welcome to Kira智能助手, your AI客服 for 24/7 support."
     language: multilingual
     category: english_mix
+
+# Long paragraph samples for open-source model testing (~50 words, 5-6 sentences)
+# These demonstrate streaming benefits with multi-sentence text
+long_samples:
+  # 6. Long English paragraph - conversational
+  - id: long_conversation
+    text: "Hello and welcome to Kira support. My name is Alex and I'll be assisting you today. I can see you have a question about your recent order. Let me pull up your account details. Please give me just a moment to review your purchase history."
+    language: en
+    category: long_paragraph
+
+  # 7. Long English paragraph - technical/informative
+  - id: long_technical
+    text: "The new software update includes several important features. First, we've improved the response time by forty percent. Second, the interface has been redesigned for better usability. Third, we added support for multiple languages. Finally, security patches have been applied to protect your data."
+    language: en
+    category: long_paragraph
+
+  # 8. Long English paragraph - customer service
+  - id: long_service
+    text: "Thank you for contacting us today. I understand you're experiencing an issue with your subscription. Don't worry, I'm here to help resolve this quickly. I've reviewed your account and found the problem. Let me apply a fix right now. You should see the changes within five minutes."
+    language: en
+    category: long_paragraph
