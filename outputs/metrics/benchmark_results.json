@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-01-28T16:49:35.687278",
-  "iterations": 5,
+  "timestamp": "2026-01-28T17:31:43.051975",
+  "iterations": 3,
   "providers": {
     "minimax": {
       "total_latency_mean_ms": 4550.156795697694,
@@ -1005,6 +1005,88 @@
           "chars_per_second": 20.551703884883914,
           "cost_usd": 0.0,
           "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/luxtts/numbers.wav"
+        }
+      ]
+    },
+    "luxtts_streaming": {
+      "total_latency_mean_ms": 2174.1323286615725,
+      "total_cost_usd": 0.0,
+      "avg_realtime_factor": 2.5864220989078093,
+      "languages_tested": [
+        "en"
+      ],
+      "results": [
+        {
+          "provider": "LuxTTS Streaming",
+          "sample_id": "basic",
+          "text": "Hello, how can I help you today?",
+          "language": "en",
+          "category": "basic",
+          "latency_stats": {
+            "mean_ms": 926.0975136712659,
+            "median_ms": 923.7669160065707,
+            "min_ms": 923.0969579948578,
+            "max_ms": 931.4286670123693,
+            "p95_ms": 931.4286670123693,
+            "std_dev_ms": 4.629050431150279,
+            "ttfb_mean_ms": 926.0975136712659
+          },
+          "iterations": 3,
+          "duration_seconds": 1.4506666666666668,
+          "sample_rate": 48000,
+          "characters": 32,
+          "realtime_factor": 1.557464052850976,
+          "chars_per_second": 34.35582469524211,
+          "cost_usd": 0.0,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/luxtts_streaming/basic.wav"
+        },
+        {
+          "provider": "LuxTTS Streaming",
+          "sample_id": "complex",
+          "text": "Dr. Smith's API at api.example.com returns JSON for the Q4 NYSE report.",
+          "language": "en",
+          "category": "complex",
+          "latency_stats": {
+            "mean_ms": 2152.886750312367,
+            "median_ms": 2146.609333984088,
+            "min_ms": 2134.9316669802647,
+            "max_ms": 2177.1192499727476,
+            "p95_ms": 2177.1192499727476,
+            "std_dev_ms": 21.783078444191805,
+            "ttfb_mean_ms": 2152.886750312367
+          },
+          "iterations": 3,
+          "duration_seconds": 6.581333333333333,
+          "sample_rate": 48000,
+          "characters": 71,
+          "realtime_factor": 3.022954913202718,
+          "chars_per_second": 32.61190217342883,
+          "cost_usd": 0.0,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/luxtts_streaming/complex.wav"
+        },
+        {
+          "provider": "LuxTTS Streaming",
+          "sample_id": "numbers",
+          "text": "Your balance is $12,847.53, payment of $299.99 due January 15th, 2026.",
+          "language": "en",
+          "category": "numbers",
+          "latency_stats": {
+            "mean_ms": 3443.412722001085,
+            "median_ms": 3469.6014580258634,
+            "min_ms": 3358.1947919738013,
+            "max_ms": 3502.4419160035904,
+            "p95_ms": 3502.4419160035904,
+            "std_dev_ms": 75.60552637637002,
+            "ttfb_mean_ms": 3443.412722001085
+          },
+          "iterations": 3,
+          "duration_seconds": 11.029333333333334,
+          "sample_rate": 48000,
+          "characters": 70,
+          "realtime_factor": 3.178847330669734,
+          "chars_per_second": 20.17522786027092,
+          "cost_usd": 0.0,
+          "audio_file": "/Users/erin/Documents/TTS speech model/outputs/audio/luxtts_streaming/numbers.wav"
         }
       ]
     }

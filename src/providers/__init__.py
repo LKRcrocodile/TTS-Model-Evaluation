@@ -9,6 +9,7 @@ from .minimax_pcm_streaming import MiniMaxPCMStreamingProvider
 from .qwen_tts import QwenTTSProvider, QwenStreamingProvider
 from .qwen_selfhosted import QwenSelfHostedProvider
 from .luxtts import LuxTTSProvider
+from .luxtts_streaming import LuxTTSStreamingProvider
 
 __all__ = [
     "TTSProvider",
@@ -24,4 +25,5 @@ __all__ = [
     "QwenStreamingProvider",
     "QwenSelfHostedProvider",
     "LuxTTSProvider",
+    "LuxTTSStreamingProvider",
 ]

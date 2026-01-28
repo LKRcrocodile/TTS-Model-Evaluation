@@ -21,6 +21,7 @@ from src.providers import (
     QwenStreamingProvider,
     QwenSelfHostedProvider,
     LuxTTSProvider,
+    LuxTTSStreamingProvider,
 )
 from src.evaluation import BenchmarkRunner
 from src.presentation import DashboardGenerator
@@ -97,6 +98,7 @@ def main():
             "qwen3_streaming": QwenStreamingProvider,
             "qwen3_selfhosted": QwenSelfHostedProvider,
             "luxtts": LuxTTSProvider,
+            "luxtts_streaming": LuxTTSStreamingProvider,
         }
 
         providers = {}
