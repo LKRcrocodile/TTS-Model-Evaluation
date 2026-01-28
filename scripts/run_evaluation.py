@@ -19,6 +19,7 @@ from src.providers import (
     MiniMaxPCMStreamingProvider,
     QwenTTSProvider,
     QwenStreamingProvider,
+    QwenSelfHostedProvider,
     LuxTTSProvider,
 )
 from src.evaluation import BenchmarkRunner
@@ -94,6 +95,7 @@ def main():
             "minimax_pcm": MiniMaxPCMStreamingProvider,
             "qwen3": QwenTTSProvider,
             "qwen3_streaming": QwenStreamingProvider,
+            "qwen3_selfhosted": QwenSelfHostedProvider,
             "luxtts": LuxTTSProvider,
         }
 
